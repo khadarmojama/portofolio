@@ -1,4 +1,4 @@
-# Khadar Git Capstone
+# Portofolio
 
 A simple personal portfolio project created to demonstrate
 a complete Git and GitHub workflow.
