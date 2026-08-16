@@ -4,9 +4,174 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Khadar MoJama — Portfolio</title>
-    <link rel="stylesheet" href="styles.css" />
+    <style>
+      :root {
+        --bg: #0f1115;
+        --card: #171a21;
+        --text: #e8e8ea;
+        --muted: #9a9ea6;
+        --accent: #6ee7b7;
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background: var(--bg);
+        color: var(--text);
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
+          sans-serif;
+        line-height: 1.6;
+      }
+      .wrap {
+        max-width: 720px;
+        margin: 0 auto;
+        padding: 0 24px 100px;
+      }
+
+      nav {
+        max-width: 720px;
+        margin: 0 auto;
+        padding: 20px 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #22252d;
+        margin-bottom: 56px;
+      }
+      nav .brand {
+        font-weight: 700;
+        color: var(--text);
+        text-decoration: none;
+        font-size: 1rem;
+      }
+      nav .nav-links {
+        display: flex;
+        gap: 24px;
+      }
+      nav .nav-links a {
+        color: var(--muted);
+        text-decoration: none;
+        font-size: 0.9rem;
+        transition: color 0.2s;
+      }
+      nav .nav-links a:hover,
+      nav .nav-links a.active {
+        color: var(--accent);
+      }
+
+      header {
+        margin-bottom: 56px;
+      }
+      header h1 {
+        font-size: 2.2rem;
+        font-weight: 700;
+      }
+      header p.role {
+        color: var(--accent);
+        font-size: 1rem;
+        margin-top: 6px;
+      }
+      header p.bio {
+        color: var(--muted);
+        margin-top: 16px;
+        max-width: 560px;
+      }
+
+      .links {
+        margin-top: 20px;
+        display: flex;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+      .links a {
+        color: var(--text);
+        text-decoration: none;
+        border: 1px solid #2a2e37;
+        padding: 8px 14px;
+        border-radius: 8px;
+        font-size: 0.9rem;
+        transition:
+          border-color 0.2s,
+          color 0.2s;
+      }
+      .links a:hover {
+        border-color: var(--accent);
+        color: var(--accent);
+      }
+
+      section {
+        margin-bottom: 48px;
+      }
+      section h2 {
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        color: var(--muted);
+        margin-bottom: 20px;
+      }
+
+      .project {
+        background: var(--card);
+        border: 1px solid #22252d;
+        border-radius: 12px;
+        padding: 20px;
+        margin-bottom: 14px;
+      }
+      .project h3 {
+        font-size: 1.1rem;
+        margin-bottom: 6px;
+      }
+      .project p {
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+      .project .tags {
+        margin-top: 10px;
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+      .project .tags span {
+        font-size: 0.75rem;
+        color: var(--accent);
+        background: rgba(110, 231, 183, 0.1);
+        padding: 3px 9px;
+        border-radius: 6px;
+      }
+
+      .skills-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      .skills-list span {
+        border: 1px solid #2a2e37;
+        padding: 6px 12px;
+        border-radius: 999px;
+        font-size: 0.85rem;
+        color: var(--muted);
+      }
+
+      footer {
+        color: var(--muted);
+        font-size: 0.85rem;
+        border-top: 1px solid #22252d;
+        padding-top: 24px;
+      }
+    </style>
   </head>
   <body>
+    <nav>
+      <a class="brand" href="index.html">Khadar MoJama</a>
+      <div class="nav-links">
+        <a href="index.html" class="active">Work</a>
+        <a href="about.html">About</a>
+      </div>
+    </nav>
+
     <div class="wrap">
       <header>
         <h1>Khadar MoJama</h1>
@@ -16,8 +181,6 @@
           on React, design systems, and performance.
         </p>
         <div class="links">
-          <a href="mailto:khadrmohamedjama@gmail.com">Email</a>
-
           <a
             href="https://github.com/khadarmojama"
             target="_blank"
@@ -38,11 +201,7 @@
 
         <div class="project">
           <h3>Task Flow</h3>
-          <p>
-            A minimal drag-and-drop task manager with real-time sync.
-            <a href="">see in here</a>
-          </p>
-
+          <p>A minimal drag-and-drop task manager with real-time sync.</p>
           <div class="tags"><span>React</span><span>Firebase</span></div>
         </div>
 
@@ -51,15 +210,21 @@
           <p>A weather app with animated forecasts and location search.</p>
           <div class="tags"><span>JavaScript</span><span>API</span></div>
         </div>
+
+        <div class="project">
+          <h3>Portfolio Generator</h3>
+          <p>A tool that turns a JSON resume into a themed static site.</p>
+          <div class="tags"><span>Node.js</span><span>HTML/CSS</span></div>
+        </div>
       </section>
 
       <section>
         <h2>Skills</h2>
         <div class="skills-list">
           <span>HTML/CSS</span>
+          <span>TailwindCSS</span>
           <span>JavaScript</span>
           <span>React</span>
-          <span>React.js</span>
           <span>Git</span>
         </div>
       </section>
