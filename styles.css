@@ -1,0 +1,124 @@
+:root {
+  --bg: #0f1115;
+  --card: #171a21;
+  --text: #e8e8ea;
+  --muted: #9a9ea6;
+  --accent: #6ee7b7;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+}
+.wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 64px 24px 100px;
+}
+
+header {
+  margin-bottom: 56px;
+}
+header h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+header p.role {
+  color: var(--accent);
+  font-size: 1rem;
+  margin-top: 6px;
+}
+header p.bio {
+  color: var(--muted);
+  margin-top: 16px;
+  max-width: 560px;
+}
+
+.links {
+  margin-top: 20px;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.links a {
+  color: var(--text);
+  text-decoration: none;
+  border: 1px solid #2a2e37;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  transition:
+    border-color 0.2s,
+    color 0.2s;
+}
+.links a:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+section {
+  margin-bottom: 48px;
+}
+section h2 {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--muted);
+  margin-bottom: 20px;
+}
+
+.project {
+  background: var(--card);
+  border: 1px solid #22252d;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 14px;
+}
+.project h3 {
+  font-size: 1.1rem;
+  margin-bottom: 6px;
+}
+.project p {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+.project .tags {
+  margin-top: 10px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.project .tags span {
+  font-size: 0.75rem;
+  color: var(--accent);
+  background: rgba(110, 231, 183, 0.1);
+  padding: 3px 9px;
+  border-radius: 6px;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.skills-list span {
+  border: 1px solid #2a2e37;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+footer {
+  color: var(--muted);
+  font-size: 0.85rem;
+  border-top: 1px solid #22252d;
+  padding-top: 24px;
+}
