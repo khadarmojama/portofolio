@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About — Jane Doe</title>
+    <style>
+      :root {
+        --bg: #0f1115;
+        --card: #171a21;
+        --text: #e8e8ea;
+        --muted: #9a9ea6;
+        --accent: #6ee7b7;
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background: var(--bg);
+        color: var(--text);
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
+          sans-serif;
+        line-height: 1.6;
+      }
+      .wrap {
+        max-width: 720px;
+        margin: 0 auto;
+        padding: 0 24px 100px;
+      }
+
+      nav {
+        max-width: 720px;
+        margin: 0 auto;
+        padding: 20px 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #22252d;
+        margin-bottom: 48px;
+      }
+      nav .brand {
+        font-weight: 700;
+        color: var(--text);
+        text-decoration: none;
+        font-size: 1rem;
+      }
+      nav .nav-links {
+        display: flex;
+        gap: 24px;
+      }
+      nav .nav-links a {
+        color: var(--muted);
+        text-decoration: none;
+        font-size: 0.9rem;
+        transition: color 0.2s;
+      }
+      nav .nav-links a:hover,
+      nav .nav-links a.active {
+        color: var(--accent);
+      }
+
+      header {
+        margin-top: 48px;
+        margin-bottom: 48px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      }
+      .avatar {
+        width: 84px;
+        height: 84px;
+        border-radius: 50%;
+        object-fit: cover;
+        flex-shrink: 0;
+        border: 2px solid #22252d;
+      }
+      header h1 {
+        font-size: 2rem;
+        font-weight: 700;
+      }
+      header p.role {
+        color: var(--accent);
+        font-size: 0.95rem;
+        margin-top: 4px;
+      }
+
+      section {
+        margin-bottom: 40px;
+      }
+      section h2 {
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        color: var(--muted);
+        margin-bottom: 16px;
+      }
+      section p {
+        color: var(--text);
+        max-width: 600px;
+      }
+      section p + p {
+        margin-top: 12px;
+      }
+
+      .timeline {
+        border-left: 2px solid #22252d;
+        padding-left: 20px;
+      }
+      .timeline-item {
+        margin-bottom: 24px;
+        position: relative;
+      }
+      .timeline-item::before {
+        content: "";
+        position: absolute;
+        left: -26px;
+        top: 4px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: var(--accent);
+      }
+      .timeline-item .date {
+        font-size: 0.8rem;
+        color: var(--muted);
+      }
+      .timeline-item h3 {
+        font-size: 1.05rem;
+        margin: 4px 0 4px;
+      }
+      .timeline-item p {
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      .facts {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+      }
+      .facts div {
+        background: var(--card);
+        border: 1px solid #22252d;
+        border-radius: 10px;
+        padding: 14px 16px;
+      }
+      .facts div span {
+        display: block;
+        font-size: 0.75rem;
+        color: var(--muted);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 4px;
+      }
+
+      footer {
+        color: var(--muted);
+        font-size: 0.85rem;
+        border-top: 1px solid #22252d;
+        padding-top: 24px;
+        margin-top: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a class="brand" href="index.html">Khadar MoJama</a>
+      <div class="nav-links">
+        <a href="index.html">Work</a>
+        <a href="about.html" class="active">About</a>
+      </div>
+    </nav>
+
+    <div class="wrap">
+      <header>
+        <img class="avatar" src="./khadar.jpg" alt="Khadar MoJama" />
+        <div>
+          <h1>About Me</h1>
+          <p class="role">Frontend Developer</p>
+        </div>
+      </header>
+
+      <section>
+        <h2>Who I Am</h2>
+        <p>
+          I'm Jane, a frontend developer with a passion for building interfaces
+          that feel simple, fast, and a little delightful. I care about the
+          details other people skip — spacing, motion, load times.
+        </p>
+        <p>
+          When I'm not coding, I'm usually reading sci-fi, hiking, or tinkering
+          with side projects that never quite make it to production.
+        </p>
+      </section>
+
+      <section>
+        <h2>Quick Facts</h2>
+        <div class="facts">
+          <div><span>Location</span>Remote / Worldwide</div>
+          <div><span>Experience</span>5+ years</div>
+          <div><span>Focus</span>React &amp; Design Systems</div>
+          <div><span>Currently</span>Open to work</div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Journey</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="date">2024 — Present</div>
+            <h3>Senior Frontend Developer, Acme Co.</h3>
+            <p>
+              Leading the design system team and mentoring junior engineers.
+            </p>
+          </div>
+          <div class="timeline-item">
+            <div class="date">2021 — 2024</div>
+            <h3>Frontend Developer, Startly</h3>
+            <p>Built and shipped the core product UI from the ground up.</p>
+          </div>
+          <div class="timeline-item">
+            <div class="date">2019 — 2021</div>
+            <h3>Junior Developer, WebWorks</h3>
+            <p>
+              Learned the ropes building marketing sites and internal tools.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <footer>&copy; 2026 Khadar MoJama. Built with HTML &amp; CSS.</footer>
+    </div>
+  </body>
+</html>
